@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.chehejia.netanly.MainActivity">
+
+
+
+    <EditText
+        android:id="@+id/interval"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:text="60"
+        android:inputType="number"
+        tools:layout_editor_absoluteX="38dp"
+        tools:layout_editor_absoluteY="87dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <EditText
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="采样日期"
+        android:inputType="date"
+        tools:layout_editor_absoluteX="38dp"
+        tools:layout_editor_absoluteY="26dp"
+        app:layout_constraintLeft_toLeftOf="@id/interval"
+        app:layout_constraintTop_toBottomOf="@id/interval" />
+
+    <Button
+        android:id="@+id/get_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="getNetworkTraffic"
+        android:text="Get"
+        tools:layout_editor_absoluteX="38dp"
+        tools:layout_editor_absoluteY="177dp"
+        app:layout_constraintLeft_toLeftOf="@id/date"
+        app:layout_constraintTop_toBottomOf="@id/date"
+        />
+
+</android.support.constraint.ConstraintLayout>

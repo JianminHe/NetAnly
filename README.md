@@ -1,2 +1,11 @@
-# NetAnly
-分析Android移动端流量（Mobile only, 不支持WIFI）
+  #本程序用于统计Android6.0以上系统手机流量#
+
+  使用方法：
+  1. 编译并且安装到目标Android系统；
+  2. Android中获取流量相关权限；
+  3. 设置统计日期，统计间隔。默认使用当天，间隔60s(只统计mobile, 不统计wifi)；
+  4. 点击开始，由于统计比较耗时，需要耐心等待一会（成功以后没有直接提示，会有locat日志输出）；
+  5. 文件保存到/mnt/sdcard/目录下，  文件名  netanly+日期.csv   例如：netanly2018-05-10.csv
+  6. 在电脑上通过adb命令导出文件，adb pull /mnt/sdcard/netanly2018-05-10.csv e:\ ；
+  7. 使用excel进行数据分析；
+  8. RX,TX数据单位byte, 当天数据进行累加。 比如： 用户10:00 上网使用 10M RX，10:10上网使用15M。那么统计时第一次RX = 10M, 第二次=25M。
